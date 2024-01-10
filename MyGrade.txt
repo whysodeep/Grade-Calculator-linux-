@@ -1,0 +1,53 @@
+#!/bin/bash
+
+#Desc: this script is used to calculate the final grade of a student in numeric and letter format
+
+
+
+
+
+echo -n "Enter assignment marks(0-40): "
+read assignmentgrade
+echo -n "Enter test1 marks(0-15): "
+read test1grade
+echo -n "Enter test2 marks(1-15): "
+read test2grade
+echo -n "Enter final exam marks(0-30): "
+read finalexamgrade
+
+final_grade=$((assignmentgrade + test1grade + test2grade + finalexamgrade))
+
+
+if [[ $final_grade -ge 90 ]]; then
+	final_result="A+"
+elif [[ $final_grade -ge 85 ]]; then
+        final_result= "A"
+elif [[ $final_grade -ge 80 ]]; then
+     final_result="A-"
+elif [[ $final_grade -ge 77 ]]; then
+final_result="B+"
+elif [[ $final_grade -ge 73 ]]; then
+     final_result="B"
+elif [[ $final_grade -ge 70 ]]; then
+final_result="B-"
+elif [[ $final_grade -ge 67 ]]; then
+final_result="C+"
+elif  [[ $final_grade -ge 63 ]]; then
+final_result="C"
+elif [[ $final_grade -ge 60 ]]; then
+final_result="C-"
+elif [[ $final_grade -ge 57 ]]; then
+final_result="D+"
+elif [[ $final_grade -ge 53 ]]; then
+final_result="D"
+elif [[ $final_grade -ge 50 ]]; then
+final_result="D"
+else 
+	final_result="F"
+fi
+
+echo "Your final numeric grade is $final_grade, and your final letter grade is $final_result"
+
+
+
+ 
